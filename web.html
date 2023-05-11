@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Apparaten Beheer Systeem</title>
+    <title>Device Management</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      /* Stijlen voor de GUI */
+      /* Stijlen*/
       label {
         display: block;
         margin-top: 1em;
@@ -36,22 +36,17 @@
   </head>
   <body>
     <header>
-      <h1>Apparaten Beheer Systeem</h1>
+      <h1>Device Management</h1>
     </header>
     <main>
       <h2>Apparaten</h2>
       <form>
         <label for="apparaatnaam">Apparaatnaam:</label>
         <input type="text" id="apparaatnaam" name="apparaatnaam">
-        <br>
-        <label for="toegekend_aan">Toegekend aan:</label>
-        <select id="toegekend_aan" name="toegekend_aan">
-          <option value="">- Kies persoon -</option>
-          <option value="1">Jan Janssen</option>
-          <option value="2">Piet Pietersen</option>
-          <option value="3">Kees de Vries</option>
-        </select>
-        <br>
+
+        <label for="apparaatnaam">Toegekend aan:</label>
+        <input type="text" id="apparaatnaam" name="apparaatnaam">
+
         <label for="toekenningdatum">Toekenning tot:</label>
         <input type="date" id="toekenningdatum" name="toekenningdatum">
         <input type="submit" value="Apparaat toevoegen">
@@ -59,26 +54,34 @@
       <table>
         <thead>
           <tr>
-            <th>Apparaatnaam:</th>
-            <th>Toegewezen aan:</th>
-            <th>Status:</th>
+            <th>Voornaam:</th>
+            <th>Achternaam:</th>
+            <th>Apparaat:</th>
+            <th>Toekenningsdatum:</th>
+            <th>Geldig tot:</th>
           </tr>
         </thead>
         <tbody>
           <tr>
+            <td>Jan</td>
+            <td>Janssen</td>
             <td>Laptop</td>
-            <td>Jan Janssen</td>
-            <td>Actief</td>
+            <td>11-05-2023</td>
+            <td>15-10-2023</td>
           </tr>
           <tr>
-            <td>Smartphone</td>
-            <td>Piet Pietersen</td>
-            <td>Actief</td>
+            <td>Piet</td>
+            <td>Pietersen</td>
+            <td>Telefoon</td>
+            <td>11-05-2023</td>
+            <td>15-10-2023</td>
           </tr>
           <tr>
-            <td>Tablet</td>
-            <td>Kees de Vries</td>
-            <td>Verloren</td>
+            <td>Kees</td>
+            <td>de Vries</td>
+            <td>Computer</td>
+            <td>11-05-2023</td>
+            <td>15-10-2023</td>
           </tr>
         </tbody>
       </table>

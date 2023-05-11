@@ -1,9 +1,12 @@
 package main
 
 import (
+	"database/sql"
 	"fmt"
 	"net/http"
 	"os"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
@@ -12,6 +15,15 @@ func main() {
 	if err != nil {
 		errors("Kon niet verbinden met de port", err, 0) //Nog niet zeker of dit nut heeft.
 	}
+
+	// Maak een databaseverbinding
+	db, err := sql.Open("mysql", "root:v01LnMA1XG*T@tcp(localhost:3306)/apparaattoekenningen")
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+	defer db.Close()
+	db.Query("INSERT INTO `apparaattoekenningen`.`toekenningen`(`voornaam`,`achternaam`,`apparaat`,`toekenning_datum`,`geldig_tot`) VALUE('hoi','go','laptop',NOW(),NOW());")
 }
 
 func HTMLpagina(writer http.ResponseWriter, request *http.Request) {
