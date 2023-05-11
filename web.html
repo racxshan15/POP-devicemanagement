@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apparaten Beheer Systeem</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* Stijlen voor de GUI */
+      label {
+        display: block;
+        margin-top: 1em;
+      }
+      input[type="submit"] {
+        margin-top: 1.5em;
+        padding: 0.3em;
+        background-color: #454adf;
+        color: #ffffff; 
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      table {
+        border-collapse: collapse;
+        margin-top: 2em;
+        width: 100%;
+      }
+      th, td {
+        padding: 0.5em;
+        border: 1px solid #ccc;
+      }
+      th {
+        background-color: #eee;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Apparaten Beheer Systeem</h1>
+    </header>
+    <main>
+      <h2>Apparaten</h2>
+      <form>
+        <label for="apparaatnaam">Apparaatnaam:</label>
+        <input type="text" id="apparaatnaam" name="apparaatnaam">
+        <br>
+        <label for="toegekend_aan">Toegekend aan:</label>
+        <select id="toegekend_aan" name="toegekend_aan">
+          <option value="">- Kies persoon -</option>
+          <option value="1">Jan Janssen</option>
+          <option value="2">Piet Pietersen</option>
+          <option value="3">Kees de Vries</option>
+        </select>
+        <br>
+        <label for="toekenningdatum">Toekenning tot:</label>
+        <input type="date" id="toekenningdatum" name="toekenningdatum">
+        <input type="submit" value="Apparaat toevoegen">
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Apparaatnaam:</th>
+            <th>Toegewezen aan:</th>
+            <th>Status:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Laptop</td>
+            <td>Jan Janssen</td>
+            <td>Actief</td>
+          </tr>
+          <tr>
+            <td>Smartphone</td>
+            <td>Piet Pietersen</td>
+            <td>Actief</td>
+          </tr>
+          <tr>
+            <td>Tablet</td>
+            <td>Kees de Vries</td>
+            <td>Verloren</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>E-mails</h2>
+      <form>
+        <label for="ontvanger">Ontvanger:</label>
+        <input type="email" id="ontvanger" name="ontvanger">
+        <br>
+
+        <label for="onderwerp">Onderwerp:</label>
+        <input type="text" id="onderwerp" name="onderwerp">
+        <br>
+        
+        <label for="bericht">Bericht:</label>
+        <textarea id="bericht" name="bericht" rows="4"></textarea>
+        <br>
+
+        <input type="submit" onclick="alert('Email verzonden')" value="E-mail verzenden">
+        </form>
+        </main>
+        <footer>
+        <p>© 2023 - Apparaten Beheer Systeem</p>
+        </footer>        
+          </body>
+        </html>
