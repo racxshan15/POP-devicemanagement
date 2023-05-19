@@ -40,15 +40,18 @@
     </header>
     <main>
       <h2>Apparaten</h2>
-      <form>
+      <form method="POST" action="/">
         <label for="apparaatnaam">Apparaatnaam:</label>
         <input type="text" id="apparaatnaam" name="apparaatnaam">
 
-        <label for="apparaatnaam">Toegekend aan:</label>
-        <input type="text" id="apparaatnaam" name="apparaatnaam">
+        <label for="name">Voornaam:</label>
+        <input type="text" id="Name" name="name">
+        
+        <label for="surname">Achternaam:</label>
+        <input type="text" id="Surname" name="surname">
 
-        <label for="toekenningdatum">Toekenning tot:</label>
-        <input type="date" id="toekenningdatum" name="toekenningdatum">
+        <label for="geldigheid">Geldig tot:</label>
+        <input type="date" id="geldigheid" name="datum">
         <input type="submit" value="Apparaat toevoegen">
       </form>
       <table>
