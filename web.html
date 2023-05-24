@@ -35,14 +35,13 @@
     </style>
   </head>
   <body>
+    <center>
     <header>
       <h1>Device Management</h1>
     </header>
     <main>
-      <h2>Apparaten</h2>
-      <form method="POST" action="/">
-        <label for="apparaatnaam">Apparaatnaam:</label>
-        <input type="text" id="apparaatnaam" name="apparaatnaam">
+      <h2>Apparaat toevoegen</h2>
+      <form method="POST" action="/" id="platformkeusform">
 
         <label for="name">Voornaam:</label>
         <input type="text" id="Name" name="name">
@@ -50,10 +49,29 @@
         <label for="surname">Achternaam:</label>
         <input type="text" id="Surname" name="surname">
 
+        <label for="apparaatnaam">Apparaatnaam:</label>
+        <input type="text" id="apparaatnaam" name="apparaatnaam">
+
+        <label for="platform">Platform:</label>
+        <select id="Platform" name="platform" form="platformkeusform">
+        <option value="" disabled selected>-- Kies platform --</option>
+        <option value="Windows">Windows</option>
+        <option value="IOS/IpadOS">IOS/IpadOS</option>
+        <option value="macOS">macOS</option>
+        <option value="Android">Android</option>
+        <option value="Chrome OS">Chrome OS</option>
+        <option value="Linux">Linux</option>
+        </select>
+
+        <label for="Serialnumber">Serienummer:</label>
+        <input type="text" id="Serienummer" name="serienummer">
+
         <label for="geldigheid">Geldig tot:</label>
         <input type="date" id="geldigheid" name="datum">
         <input type="submit" value="Apparaat toevoegen">
       </form>
+      </center>
+
       <table>
         <thead>
           <tr>
@@ -62,6 +80,8 @@
             <th>Apparaat:</th>
             <th>Toekenningsdatum:</th>
             <th>Geldig tot:</th>
+            <th>Platform:</th>
+            <th>Serienummer:</th>
           </tr>
         </thead>
         <tbody>
@@ -71,6 +91,8 @@
             <td>Laptop</td>
             <td>11-05-2023</td>
             <td>15-10-2023</td>
+            <td>Windows</td>
+            <td>7323AE5BB8DM7V</td>
           </tr>
           <tr>
             <td>Piet</td>
@@ -78,6 +100,8 @@
             <td>Telefoon</td>
             <td>11-05-2023</td>
             <td>15-10-2023</td>
+            <td>Windows</td>
+            <td>7323AE5BB8DM7V</td>
           </tr>
           <tr>
             <td>Kees</td>
@@ -85,9 +109,40 @@
             <td>Computer</td>
             <td>11-05-2023</td>
             <td>15-10-2023</td>
+            <td>Windows</td>
+            <td>7323AE5BB8DM7V</td>
           </tr>
+          
         </tbody>
       </table>
+
+      <!--
+      <table>
+        <thead>
+          <tr>
+            <th>Voornaam:</th>
+            <th>Achternaam:</th>
+            <th>Apparaat:</th>
+            <th>Toekenningsdatum:</th>
+            <th>Geldig tot:</th>
+            <th>Platform:</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{range .}}
+          <tr>
+            <td>{{.Voornaam}}</td>
+            <td>{{.Achternaam}}</td>
+            <td>{{.Apparaat}}</td>
+            <td>{{.Toekenningsdatum}}</td>
+            <td>{{.GeldigTot}}</td>
+            <td>{{.Platform}}</td>
+          </tr>
+          {{end}}
+        </tbody>
+      </table>
+      -->
+
       <h2>E-mails</h2>
       <form>
         <label for="ontvanger">Ontvanger:</label>
