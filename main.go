@@ -48,7 +48,7 @@ func main() {
 	err = http.ListenAndServe(":8080", nil) // Hier wordt aangegeven dat de server moet draaien op poort 8080.
 	if err != nil {
 		log.Println("Kon niet verbinden met de poort:", err)
-		os.Exit(3)
+		os.Exit(2)
 	}
 }
 
