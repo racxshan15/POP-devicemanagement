@@ -10,3 +10,8 @@ Versie 3.1 - interactie met DB : Is hetzelfde als versie 3, maar met wat andere 
 Versie 4 - toevoeging Platform en Serienummer : Bij versie 4 kun je nu ook bij de toekenningen een platform en Serienummer kiezen voor het apparaat. Dit wordt ook bij een POST-request naar de database gestuurd. 
 
 Versie 5 - Environment var, HTML pad, Logging : Bij versie 5 is de wachtwoord van de database beschermd door een environment variabel. De pad van de HTML file is aangepast zodat het gedeployd kan worden in Azure. Ook wordt er in een error file de fouten bijgehouden met logging.
+
+App service versie - Dit is de versie die op Azure APP Service draait.
+
+VERBINDING MAKEN MET DATABASE:
+De verbinding met de database wordt gedaan met de Environment Variabelen (Regel 30 tot 34 in de Code). Wanneer je de applicatie in een andere omgeving wilt draaien moet je ervoor zorgen dat je in dat omgeving environment varaiabelen kunt aanmaken. Maak dezelfde environment variabelen als in de code en voeg als waarde je eigen gegevens toe van de database.
